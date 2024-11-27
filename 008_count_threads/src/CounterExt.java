@@ -3,9 +3,7 @@ import java.time.Instant;
 
 public class CounterExt extends Thread {
     private static volatile int totalCount = 0;
-    private int myCount = 0;
-    private int maxTotalCount;
-    private static final Object lock = new Object();
+    private final int maxTotalCount;
 
     public CounterExt(int maxTotalCount, String name) {
         super(name);
@@ -14,10 +12,11 @@ public class CounterExt extends Thread {
 
     @Override
     public void run() {
+        var myCount = 0;
         var start = Instant.now();
 
         while (true) {
-            synchronized (lock) {
+            synchronized (getClass()) {
                 if (totalCount >= maxTotalCount) {
                     break;
                 } else {
@@ -37,9 +36,5 @@ public class CounterExt extends Thread {
 
     public static int getTotalCount() {
         return totalCount;
-    }
-
-    public int getMyCount() {
-        return myCount;
     }
 }
