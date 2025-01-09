@@ -1,0 +1,37 @@
+@startuml
+
+left to right direction
+skinparam linetype ortho
+skinparam classAttributeIconSize 0
+
+package "lotteryAnalyzer" {
+
+entity LotteryTip << record >> {
+  - id: String
+  - numbers: int[]
+}
+
+class LotteryAnalyzer {
+  - WINNING_NUMBERS: List<Integer>
+  + LotteryAnalyzer():
+  + main(String[]): void
+  + getAllFiles(Path, String): List<Path>
+}
+
+class LotteryAnalyzerTask {
+  - filePath: Path
+  - winningNumbers: List<Integer>
+  + LotteryAnalyzerTask(Path, List<Integer>):
+  - readLotteryTipsFromFile(Path): List<LotteryTip>
+  - processLine(String): LotteryTip
+  - getCorrectCount(LotteryTip): int
+
+  + run(): void
+}
+
+LotteryAnalyzer      -[#595959,dashed]->  LotteryAnalyzerTask : "«create»"
+LotteryAnalyzerTask  -[#595959,dashed]->  LotteryTip        : "«create»"
+}
+
+
+@enduml
