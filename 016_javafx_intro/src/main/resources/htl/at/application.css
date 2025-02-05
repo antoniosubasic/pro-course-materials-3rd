@@ -1,0 +1,42 @@
+.root {
+    -fx-background-color: transparent;
+}
+
+.button {
+    -fx-background-color: transparent;
+}
+
+.btUntis {
+    -fx-background-image: url("images/webuntis.png");
+    -fx-background-size: 64.0 64.0;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.btMoodle {
+    -fx-background-image: url("images/moodle.png");
+    -fx-background-size: 64.0 64.0;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.btMail {
+    -fx-background-image: url("images/mail.png");
+    -fx-background-size: 64.0 64.0;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.btWiki {
+    -fx-background-image: url("images/wiki.png");
+    -fx-background-size: 64.0 64.0;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.btExit {
+    -fx-background-image: url("images/exit.png");
+    -fx-background-size: 64.0 64.0;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
