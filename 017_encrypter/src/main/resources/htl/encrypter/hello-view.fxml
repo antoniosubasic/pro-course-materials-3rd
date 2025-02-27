@@ -9,7 +9,7 @@
 <?import javafx.scene.control.TextArea?>
 
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-    fx:controller="htl.encrypter.HelloController">
+    fx:controller="htl.encrypter.EncryptController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -28,9 +28,10 @@
     </GridPane>
 
     <Label text="Plain text:" />
-    <TextArea prefHeight="400" />
-    <Button text="Encrypt" />
+    <TextArea fx:id="txtPlainText" prefHeight="400" />
 
     <Label text="Plain text:" />
-    <TextArea prefHeight="400" />
+    <TextArea fx:id="txtEncryptedText" prefHeight="400" />
+
+    <Button text="Save" onAction="#onSaveButtonClicked" />
 </VBox>
