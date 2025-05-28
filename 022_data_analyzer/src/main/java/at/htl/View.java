@@ -24,7 +24,9 @@ public class View {
         HBox centerRow = new HBox(15);
         centerRow.setAlignment(Pos.CENTER);
         TreeView<String> databaseTreeView = new TreeView<>();
+        databaseTreeView.setPrefWidth(320);
         TableView<Object> dataTableView = new TableView<>();
+        dataTableView.setPrefWidth(480);
         centerRow.getChildren().addAll(databaseTreeView, dataTableView);
 
         DatabaseController controller = new DatabaseController(urlField, userField, passwordField, databaseTreeView,

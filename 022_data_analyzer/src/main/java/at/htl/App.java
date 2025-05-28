@@ -10,7 +10,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) {
         VBox root = View.createPrimaryView();
-        Scene scene = new Scene(root, 640, 480);
+        Scene scene = new Scene(root, 850, 480);
         stage.setScene(scene);
         stage.show();
     }
